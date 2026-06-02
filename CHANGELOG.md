@@ -9,6 +9,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ## [v0.15.1] - 2026-06-01
 
 ### Added
+- Added support for configuring admission Pod Disruption Budget via Helm values (`admission.podDisruptionBudget`) [#1490](https://github.com/kai-scheduler/KAI-Scheduler/pull/1490) [dttung2905](https://github.com/dttung2905)
+- Added an opt-in `hamicore` binder plugin (depends on `gpusharing`) to write the HAMI-core GPU memory limit (`CUDA_DEVICE_MEMORY_LIMIT`) for fractional GPU pods.
+- Added `global.podSecurityContext`, `global.resourceReservation.namespaceLabels`, `nodescaleadjuster.labels`, `crdupgrader.resources`, `topologyMigration.resources`, and `postCleanup.resources` to the Helm. chart.
 
 ### Changed
 - Updated Go toolchain and base build images to v1.26.3.
